@@ -9,7 +9,8 @@
 ## Resources and Tools
 | Tool / Resource | Use |
 |----|----|
-|<a href="https://learn.microsoft.com/en-us/entra/fundamentals/">Microsoft Entra ID Documentation</a> | Technical guides for configuring EntraID tenants and managing identities/access |
+|<a href="https://learn.microsoft.com/en-us/entra/fundamentals/">EntraID IAM Documentation</a> | Technical guides for configuring EntraID tenants and managing identities/access |
+|<a href="https://learn.microsoft.com/en-us/entra/id-governance/">EntraID Governance Documentation</a> | Technical guides for identity governance (access auditing, visibility, entitlement) in Entra |
 | Word / Google Docs| Used for drafting access policies and IAM procedures as formal organizational documents |
 | ChatGPT | Used to polish governance policy drafts and lab documentation |
 
