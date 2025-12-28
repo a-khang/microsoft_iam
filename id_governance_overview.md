@@ -25,15 +25,21 @@ When these considerations are addressed early, IAM stops being a collection of s
 
 This is ultimately why IGA belongs on the business side of cyber. It is not about slowing people down or adding friction for its own sake. It is about ensuring that access reflects reality, risk is acknowledged, and productivity is protected without eroding trust or accountability.
 
-## Context
-### Scenario: _Healthtech startup with regulated data_
-CarePoint builds software for clinics to manage patient appointments and health records. It processes regulated personal and health data and operates under strict privacy expectations. The company is still small, but the impact of misuse is high.
-### Key Considerations
-- Clear distinction between clinical users and internal staff;
-- Strong ownership and approval for access to sensitive data;
-- Least privilege access enforced across roles;
-- Short review cycles for privileged access;
-- Immediate deprovisioning on role change or termination
+## Context Company Profile
+### Company Profile
+**A 120-person B2B SaaS company** providing workflow automation tools to other businesses. The company has moved past the startup phase and is now **scaling sales, support, and engineering teams in parallel.**
+### Identity Population
+- Full time employees across engineering, sales, customer support, finance, and operations
+- Contractors supporting QA, UX design, and cloud infrastructure on fixed term engagements
+- Application identities for CI/CD pipelines, background jobs, and customer facing APIs
+### Business Priorities
+- Maintain fast product development without exposing production systems
+- Ensure customer support can resolve issues without overexposing data
+- Limit long lived access for contractors as teams rotate quickly
+- Protect source code and cloud credentials as the company grows
+### Identity Requirements
+- Handle IGA/IAM for headcount increases
+- Formalize access management, separate duties
 
 ## Information Governance Policies
 | Policy | Definition |
