@@ -25,11 +25,15 @@ When these considerations are addressed early, IAM stops being a collection of s
 
 This is ultimately why IGA belongs on the business side of cyber. It is not about slowing people down or adding friction for its own sake. It is about ensuring that access reflects reality, risk is acknowledged, and productivity is protected without eroding trust or accountability.
 
-## Requirements
-- Regulatory compliance
-- Reduce insider risk
-- Prevent privilege creep
-- Audit readiness
+## Context
+### Scenario: _Healthtech startup with regulated data_
+CarePoint builds software for clinics to manage patient appointments and health records. It processes regulated personal and health data and operates under strict privacy expectations. The company is still small, but the impact of misuse is high.
+### Key Considerations
+- Clear distinction between clinical users and internal staff;
+- Strong ownership and approval for access to sensitive data;
+- Least privilege access enforced across roles;
+- Short review cycles for privileged access;
+- Immediate deprovisioning on role change or termination
 
 ## Information Governance Policies
 | Policy | Definition |
