@@ -1,6 +1,6 @@
 # Identity and Access Management with Microsoft Entra
 ## Overview
-| Scope | Goal|
+| Learning Goal | Deliverable |
 |-------|--------|
 | Identity Governance | Translate business needs into IAM requirements; Establish Identity Governance policies and Management procedures; Ensure adherence to security best practices|
 | Tenant Management | Create an access portal, domain name, and tenant resources;  manage authentication; Secure and manage tenant defaults|
