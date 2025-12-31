@@ -17,4 +17,4 @@
 ## Context
 _The rising frontier of insider threats and privilege escalation-based attacks are amplified by the lack of effective identity lifecycle management and authentication/authorization measures. At the same time, employees, collaboators, and workloads (APIs, apps, services) must be able to access the right resources at the right time to do their jobs._
 
-**Next: <a href="https://github.com/a-khang/microsoft_iam/blob/main/part1.md/">Identity Governance and Administration</a>**
+**Next: <a href="https://github.com/a-khang/microsoft_iam/blob/main/part1.md/">Company Profile and Identity Governance</a>**
