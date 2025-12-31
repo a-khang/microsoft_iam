@@ -83,7 +83,7 @@ Access must be reviewed to ensure ongoing appropriateness. This is core to ident
 * Managers and system owners participate in reviews  
 * Excess or unused access is removed promptly
 
-#### 10\. Privileged access governance
+#### Privileged access governance
 
 Administrative and privileged access is tightly controlled.
 
@@ -93,7 +93,7 @@ Administrative and privileged access is tightly controlled.
 
 Service and application identities with elevated privileges are governed to the same standard as human administrators.
 
-#### 11\. Enforcement and review
+#### Enforcement and review
 
 Violations of this policy may result in access removal or corrective action.  
 This policy is reviewed periodically to ensure it continues to support business growth, security, and user trust.
