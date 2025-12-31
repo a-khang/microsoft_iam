@@ -31,6 +31,8 @@
 | Access Reviews | Defines what access must be reviewed, who reviews it, how often access should be reviewed, and how excess is remediated |
 | Privileged Access Governance | Defines and reasons who may hold admin privileges, for how long, and frequency of review |
 
+See here for <a href="https://github.com/a-khang/microsoft_iam/blob/main/part1_IdentityPolicy_IGA.docx">Identity Policy Document, Analytics SaaS</a>
+
 ## Appendix: The Importance of IGA
 I have chosen to start this Identity and Access Management project with Identity Governance and Administration. To me, it makes sense to figure out a strategy and accountability framework for security within your organization before you can do the work of IAM. I think employers are primarily concerned with whether or not I can implement an identity/access-related decision with tools like Entra. I value pragmatism but for my own learning I wanted to expand my focus on where IAM fits into the larger picture of the business. 
 
@@ -50,3 +52,8 @@ Lack of formal or repeatable identity and access management processes
 Based on NIST CSF’s maturity model, we see that the company's cybersecurity maturity is **Tier 2: Risk-informed:** The company is aware of cybersecurity risks at a high level but they lack an organization-wide approach to managing those risks. With these findings, a reasonable target for the company’s current, overall cybersecurity strategy would be to achieve **Tier 3 Maturity.**
 
 _At the Repeatable level, an organization has standardized its cybersecurity governance and risk management processes and practices and implemented them across the enterprise. These processes are consistent and repeatable, meaning they can be reliably reproduced and executed. The organization regularly reviews and updates cybersecurity practices based on the changes in business/mission requirements, threats, and technological landscape._
+
+The goals set out in the strategy are handed off to different security functions, which includes Identity and Access Managmement. To achieve repeatable processes, access decisions should no longer be informal or person-dependent, but role-based, reviewable, and consistently enforced across users, applications, and environments. This will flow nicely into Identity Governance where we set out policies. (See the table above, where these policies are outlined.)
+
+### Identity Governance
+Identity Governance produces the rules, ownership, and constraints that IAM tools must enforce. Without these inputs, IAM becomes a collection of disconnected technical controls rather than a risk management system.
