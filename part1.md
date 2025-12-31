@@ -20,7 +20,7 @@
   - Prevent overprivileged access as teams grow and responsibilities shift
 - Govern service and API identities as first class risk objects
 
-## Information Governance Policies
+## Identity Governance Policies
 | Policy | Definition |
 |--------|------------|
 | Joiner-Mover-Leaver / Lifecycle | Defines when access is granted, what baseline access is assigned, what changes when moving roles, and when access is removed |
@@ -50,8 +50,3 @@ Lack of formal or repeatable identity and access management processes
 Based on NIST CSF’s maturity model, we see that the company's cybersecurity maturity is **Tier 2: Risk-informed:** The company is aware of cybersecurity risks at a high level but they lack an organization-wide approach to managing those risks. With these findings, a reasonable target for the company’s current, overall cybersecurity strategy would be to achieve **Tier 3 Maturity.**
 
 _At the Repeatable level, an organization has standardized its cybersecurity governance and risk management processes and practices and implemented them across the enterprise. These processes are consistent and repeatable, meaning they can be reliably reproduced and executed. The organization regularly reviews and updates cybersecurity practices based on the changes in business/mission requirements, threats, and technological landscape._
-
-Therefore, the key deliverables for repeatable identity governance and IAM would include:
-
-
-
