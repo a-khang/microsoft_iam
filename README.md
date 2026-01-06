@@ -17,4 +17,9 @@
 ## Context
 _The rising frontier of insider threats and privilege escalation-based attacks are amplified by the lack of effective identity lifecycle management and authentication/authorization measures. At the same time, employees, collaboators, and workloads (APIs, apps, services) must be able to access the right resources at the right time to do their jobs._
 
+## Methodology
+I will start this project by diving into the role of Identity in protecting an organization. I will then look at the role which risk-based identity governance plays in steering IAM, before diving into implementing IAM with Entra ID. This follows the milestones outlined in Microsoft Learn's _Identity and Access Administrator Career Path._
+
+Every deliverable is centred on a fictional business scenario that involves sensitive data and various roles.
+
 **Next: <a href="https://github.com/a-khang/microsoft_iam/blob/main/part1.md/">Company Profile and Identity Governance</a>**
