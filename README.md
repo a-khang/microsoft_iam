@@ -1,25 +1,32 @@
 # Identity and Access Management with Microsoft Entra
 ## Overview
-| Learning Goal | Deliverable |
-|-------|--------|
-| Identity Governance | Translate business needs into IAM requirements; Establish Identity Governance policies and Management procedures; Ensure adherence to security best practices|
-| Tenant Management | Create an access portal, domain name, and tenant resources;  manage authentication; Secure and manage tenant defaults|
-| Identity Lifecycle | Create and Delete Users; Assign User Roles; Manage Groups and Group Membership |
-| Manage Access | Provision and Deprovision Access from Users |
-## Resources and Tools
-| Tool / Resource | Use |
-|----|----|
-|<a href="https://learn.microsoft.com/en-us/entra/fundamentals/">EntraID IAM Documentation</a> | Technical guides for configuring EntraID tenants and managing identities/access |
-|<a href="https://learn.microsoft.com/en-us/entra/id-governance/">EntraID Governance Documentation</a> | Technical guides for identity governance (access auditing, visibility, entitlement) in Entra |
-| Word / Google Docs| Used for drafting access policies and IAM procedures as formal organizational documents |
-| ChatGPT | Used to polish governance policy drafts and lab documentation |
-
-## Context
-_The rising frontier of insider threats and privilege escalation-based attacks are amplified by the lack of effective identity lifecycle management and authentication/authorization measures. At the same time, employees, collaboators, and workloads (APIs, apps, services) must be able to access the right resources at the right time to do their jobs._
-
-## Methodology
-I will start this project by diving into the role of Identity in protecting an organization. I will then look at the role which risk-based identity governance plays in steering IAM, before diving into implementing IAM with Entra ID. This follows the milestones outlined in Microsoft Learn's _Identity and Access Administrator Career Path._
+This project documents the design and implementation of Identity Governance and Access Management for a small to mid-sized B2C SaaS organization providing personal analytics to end users. Starting from business context and risk, the project defines roles, identity populations, and governance rules before implementing IAM controls using Microsoft Entra. The focus is on establishing repeatable, mature identity processes such as joiner-mover-leaver lifecycle management, role-based access, privileged access governance, and access reviews. The outcome demonstrates how identity governance decisions are operationalized in Entra to support growth, protect user trust, and reduce identity-related risk.
 
 Every deliverable is centred on a fictional business scenario that involves sensitive data and various roles.
 
-**Next: <a href="https://github.com/a-khang/microsoft_iam/blob/main/part1.md/">Company Profile and Identity Governance</a>**
+## Scope
+| In | Out |
+| -- | -- |
+|Organizational/governance artifacts; Documented processes; Entra implementation artifacts|Full Entra IaC; Complex multitenant or hybrid identity scenarios; Deep regulatory compliance mapping|
+
+## Deliverables
+### <a href="https://github.com/a-khang/microsoft_iam/blob/main/part1.md/">Organizational and governance artifacts</a>
+- Organizational context and business scenario description  
+- Identity populations and role definitions  
+- Risk-based access tier model  
+- IAM and IGA policy document covering lifecycle, RBAC, access reviews, and privileged access  
+
+### Process documentation
+- Joiner, mover, leaver lifecycle flows  
+- Access request and approval logic  
+- Privileged access request and activation flow  
+- Exception handling and temporary access process  
+- Access review cadence and remediation steps  
+
+### Entra implementation artifacts
+- Entra tenant structure overview  
+- Group-based RBAC model aligned to risk tiers  
+- Application access assignments using groups  
+- Privileged Identity Management configuration  
+- Access Review configuration by role and risk level  
+- Non-human identity governance approach.
