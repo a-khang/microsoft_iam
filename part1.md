@@ -1,8 +1,8 @@
 # Part 1: Identity Governance and Business Context
 _The rising frontier of insider threats and privilege escalation-based attacks are amplified by the lack of effective identity lifecycle management and authentication/authorization measures. At the same time, employees, collaboators, and workloads (APIs, apps, services) must be able to access the right resources at the right time to do their jobs._
 
-### IAM Scenario: Company Profile
-**An 80-person B2C SaaS company** providing personal analytics to end users. The platform aggregates user provided data and behavioral signals to generate individualized insights and recommendations. The company has recently found product market fit and is scaling engineering, customer support, and partnerships quickly.
+## IAM Scenario: Company Profile
+**An 80-person B2C SaaS company** provides a personal analytics product to end users. The platform aggregates user provided data and behavioral signals to generate individualized insights and recommendations. The company has recently found product market fit and is scaling engineering, customer support, and partnerships quickly.
 ### Identity Population
 - Full time employees across engineering, data science, product, customer support, marketing, and operations
 - Contractors supporting data labeling, model tuning, customer support overflow, and cloud operations
