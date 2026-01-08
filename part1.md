@@ -1,6 +1,8 @@
 # Part 1: Identity Governance and Business Context
 _The rising frontier of insider threats and privilege escalation-based attacks are amplified by the lack of effective identity lifecycle management and authentication/authorization measures. At the same time, employees, collaboators, and workloads (APIs, apps, services) must be able to access the right resources at the right time to do their jobs._
 
+_(There needs to be some way to introduce identity governance. Abstract out into IT governance and the role it has in bridging the chasm between technical competence and business needs.)_
+
 ## IAM Scenario: Company Profile
 **An 80-person B2C SaaS company** provides a personal analytics product to end users. The platform aggregates user provided data and behavioral signals to generate individualized insights and recommendations. The company has recently found product market fit and is scaling engineering, customer support, and partnerships quickly.
 ### Identity Population
@@ -22,6 +24,9 @@ _The rising frontier of insider threats and privilege escalation-based attacks a
 - Govern service and API identities as first class risk objects
 
 ## Identity Governance Policies
+
+(My approach the policy development is to first remember why we govern identity management - it's so that, whatever we implement in Entra, it facilitates + protects the needs of the business and supports + secures people, processes, and information. Get this out of the way, then walk through how to bridge - I just made sure that the documented policies that enable IAM will exhibit the qualities of a satisfactory business system - timely, accurate, adaptable, fixed, diligent, thorough, etc. Pick and choose)
+
 | Policy | Definition |
 |--------|------------|
 | Joiner-Mover-Leaver / Lifecycle | Defines when access is granted, what baseline access is assigned, what changes when moving roles, and when access is removed |
