@@ -37,7 +37,7 @@ _(There needs to be some way to introduce identity governance. Abstract out into
 | Access Reviews | Defines what access must be reviewed, who reviews it, how often access should be reviewed, and how excess is remediated |
 | Privileged Access Governance | Defines and reasons who may hold admin privileges, for how long, and frequency of review |
 
-See here for <a href="https://github.com/a-khang/microsoft_iam/blob/main/part1_IdentityPolicy_IGA.docx">Identity Policy Document, Analytics SaaS</a>
+See here for <a href="https://github.com/a-khang/microsoft_iam/blob/main/part1_IdentityPolicy_IGA.docx">Identity Policy Document, Analytics SaaS (Download)</a>
 
 ## Appendix: The Importance of IGA
 I have chosen to start this Identity and Access Management project with Identity Governance and Administration. To me, it makes sense to figure out a strategy and accountability framework for security within your organization before you can do the work of IAM. I think employers are primarily concerned with whether or not I can implement an identity/access-related decision with tools like Entra. I value pragmatism but for my own learning I wanted to expand my focus on where IAM fits into the larger picture of the business. 
