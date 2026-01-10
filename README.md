@@ -36,3 +36,5 @@ Every deliverable is centred on a fictional business scenario that involves sens
 - Sample access review outputs and decisions  
 - Before and after access states for lifecycle events  
 - Clear mapping from governance rule to Entra control 
+
+<img width="2073" height="1896" alt="IAM_ENTRA_WBS_300dpi" src="https://github.com/user-attachments/assets/82e70806-46ee-44f8-bd3e-bf392fca11f8" />
