@@ -30,3 +30,9 @@ Every deliverable is centred on a fictional business scenario that involves sens
 - Privileged Identity Management configuration  
 - Access Review configuration by role and risk level  
 - Non-human identity governance approach.
+
+### Evidence of repeatability
+- Examples of group-based access enforcement  
+- Sample access review outputs and decisions  
+- Before and after access states for lifecycle events  
+- Clear mapping from governance rule to Entra control 
