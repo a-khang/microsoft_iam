@@ -1,6 +1,10 @@
 # Identity and Access Management with Microsoft Entra
+_The rising frontier of insider threats and privilege escalation-based attacks are amplified by the lack of effective identity lifecycle management and authentication/authorization measures. At the same time, employees, collaboators, and workloads (APIs, apps, services) must be able to access the right resources at the right time to do their jobs._
+
 ## Overview
-This project documents the design and implementation of Identity Governance and Access Management for a small to mid-sized B2C SaaS organization providing personal analytics to end users. Starting from business context and risk, the project defines roles, identity populations, and governance rules before implementing IAM controls using Microsoft Entra. The focus is on establishing repeatable, mature identity processes such as joiner-mover-leaver lifecycle management, role-based access, privileged access governance, and access reviews. The outcome demonstrates how identity governance decisions are operationalized in Entra to support growth, protect user trust, and reduce identity-related risk.
+This project documents the design and implementation of Identity Governance and Access Management for a small to mid-sized B2C SaaS organization providing personal analytics to end users. IAM needs to be grounded in facilitating the processes and people underlying the business, just as much as it needs to be grounded in risk. 
+
+This project defines roles, identity populations, and governance rules before implementing IAM controls using Microsoft Entra. The focus is on establishing repeatable, mature identity processes such as joiner-mover-leaver lifecycle management, role-based access, privileged access governance, and access reviews. The outcome demonstrates how identity governance decisions are operationalized in Entra to support growth, protect user trust, and reduce identity-related risk.
 
 Every deliverable is centred on a fictional business scenario that involves sensitive data and various roles.
 
