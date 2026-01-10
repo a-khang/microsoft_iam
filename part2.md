@@ -1,4 +1,4 @@
-# 2.0 Process Documentation
+# 2: Process Documentation
 ## 2.1 Joiner, Mover, Leaver (JML) Lifecycle
 ### 2.1.1 Document joiner access assignment process
 ### 2.1.2 Document mover role transition process
