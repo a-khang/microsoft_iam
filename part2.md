@@ -18,3 +18,8 @@
 ### 2.4.1 Define exception criteria and justification requirements
 ### 2.4.2 Define approval and expiration rules
 ### 2.4.3 Define exception review process
+
+## 2.5 Access Reviews and Remediation
+### 2.5.1 Define access review scope by risk tier
+### 2.5.2 Define reviewer responsibilities
+### 2.5.3 Define remediation actions for excess access
