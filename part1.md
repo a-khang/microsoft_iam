@@ -1,4 +1,4 @@
-# Part 1: Identity Governance and Business Context
+# 1: Organizational and Governance Objects
 _The rising frontier of insider threats and privilege escalation-based attacks are amplified by the lack of effective identity lifecycle management and authentication/authorization measures. At the same time, employees, collaboators, and workloads (APIs, apps, services) must be able to access the right resources at the right time to do their jobs._
 
 _(There needs to be some way to introduce identity governance. Abstract out into IT governance and the role it has in bridging the chasm between technical competence and business needs.)_
