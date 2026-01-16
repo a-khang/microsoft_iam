@@ -33,24 +33,8 @@ Tiers are like buckets of risk that classify the degrees of _impact_.
 These buckets have different levels of capacity, filled by the severity of impact, which I will measure along the following dimensions:
 - **Data sensitivity:** Impact derived from the exposure, alteration, or misuse of data.
 - **Ability to modify systems:** Impact derived from being able to change system configuration, code, identity controls, or infrastructure in ways that affect (or even compromise) system behaviour, security posture, or availability.
-- **Trust/reputational impact:** Impact derived from the eroision of user, customer, or partner trust resulting from perceived misuse, mishandling, or loss of control over data or systems.
+- **Trust/reputational impact:** Impact derived from the erosion of user, customer, or partner trust resulting from perceived misuse, mishandling, or loss of control over data or systems.
 - **Blast radius:** Impact derived from the scope and scale of consequences.
-
-### Tier X, <short name>
-
-**Summary**  
-One-sentence description of impact if access is misused.
-
-**Risk profile**  
-Narrative description that combines data sensitivity, system control, trust impact, and blast radius into a single coherent risk story.
-
-**Examples of access**
-- Example 1
-- Example 2
-- Example 3
-
-If access at this level is misused, it may result in the exposure or alteration of (type of data), with (degree of ability) to modify systems or configurations. Such misuse would primarily impact (who is affected), potentially eroding (type of trust or confidence). The resulting blast radius would be (scope of impact), requiring (level of remediation or response).
-
 
 | Tier | Description |
 |------|-------------|
