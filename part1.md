@@ -28,26 +28,50 @@ Workload and API-replated identity risk must be accounted for
 ### 1.2.2 Identify non-human identity populations (apps, services, APIs)
 - Application and service identities powering data ingestion, analytics pipelines, and notification systems
 ### 1.2.3 Define business roles and ownership
+<img width="2180" height="502" alt="image" src="https://github.com/user-attachments/assets/d3f985cc-3cbc-4768-aae1-f000bb277a4f" />
+
 
 ## 1.3 Risk-Based Access Tier Model
-Different identity populations are exposed to sensitive data or workloads, making them predispositioned to some risk. I am taking a risk-based approach to identity and access management, which means strategically amping up the IAM effort in specific areas that demand more monitoring and control.
+Different identity populations are exposed to sensitive data or workloads, making them predispositioned to some risk. I am taking a risk-based approach to identity and access management, which means strategically amping up the IAM effort in specific areas that demand more monitoring and control. The model can be used as an aid to standardize and justify access decisions.
 ### 1.3.1 Define access risk tiers
-Tiers are like buckets of risk that classify the degrees of _impact_.
-These buckets have different levels of capacity, filled by the severity of impact, which I will measure along the following dimensions:
-- **Data sensitivity:** Impact derived from the exposure, alteration, or misuse of data.
-- **Ability to modify systems:** Impact derived from being able to change system configuration, code, identity controls, or infrastructure in ways that affect (or even compromise) system behaviour, security posture, or availability.
-- **Trust/reputational impact:** Impact derived from the erosion of user, customer, or partner trust resulting from perceived misuse, mishandling, or loss of control over data or systems.
-- **Blast radius:** Impact derived from the scope and scale of consequences.
 
-| Tier | Data sensitivity | Ability to modify systems | Trust / reputational impact | Blast radius |
-|---|---|---|---|---|
-| **1 – Privileged Access** | Exposure or alteration of large volumes of highly sensitive data, including data across multiple systems and domains. | Full ability to modify core infrastructure, system configuration, identity controls, and security mechanisms, fundamentally changing system behavior and availability. | Severe erosion of user and partner trust, including failure of due care and due diligence expectations, with long-term brand damage. | Organization-wide impact affecting multiple systems, services, and users, requiring full incident response and recovery. |
-| **2 – Sensitive Data Access** | Access to personal data and derived analytical outputs where misuse directly affects confidentiality and privacy. | Limited system modification capability, with access focused on data rather than control planes. | High trust impact due to personal nature of data, potentially affecting user confidence and privacy expectations. | Scoped but meaningful impact, typically affecting defined user populations or datasets rather than the entire platform. |
-| **3 – System Influence** | Little to no direct access to sensitive personal data, but access may indirectly affect data handling. | Ability to modify code, configurations, or non-production environments that influence system behavior and may propagate into production. | Moderate trust impact if misuse leads to instability, vulnerabilities, or downstream production issues. | Typically limited to internal systems or environments, but with potential for cascading effects if issues are not detected. |
-| **4 – Automation and Non-human Execution** | Data exposure depends on permission scope; misuse may involve bulk data movement or processing. | Permissions enable automated interaction with systems and data, amplifying impact due to lack of human judgment. | Trust impact escalates quickly if automation misuse affects users at scale or causes service disruption. | Potentially large blast radius due to rapid, repeated, and scalable execution across systems or datasets. |
-| **5 – General Access** | Access limited to non-sensitive internal information with minimal confidentiality concerns. | No ability to modify systems, configurations, or controls. | Minimal reputational impact if misused, with little to no effect on user trust. | Negligible impact, typically isolated to individual users or internal tooling. |
+| Tier | Risk impact summary | Governance decision it drives |
+|---|---|---|
+| **1 – Privileged Access** | Access at this tier enables modification of core infrastructure, identity systems, and security controls, fundamentally altering system behavior, availability, and integrity. Misuse may expose or compromise large volumes of highly sensitive data across multiple systems, creating organization-wide impact. The resulting trust and reputational damage would be severe, including failure of due care and due diligence expectations, and would likely require full incident response and recovery. **Normally requires privileged or control-plane access to perform the role.**| Access must be exceptional, time-bound, and tightly controlled. Standing access is avoided where possible. Requires senior approval, just-in-time elevation, strong authentication, continuous logging, and frequent access reviews. |
+| **2 – Sensitive Data Access** | Access at this tier involves personal data or derived analytical outputs where misuse directly affects confidentiality and privacy. While system modification capabilities are limited, the personal nature of the data creates high trust impact for affected users. The blast radius is typically scoped to defined user populations or datasets but carries meaningful legal, ethical, and reputational consequences. **Interaction with sensitive personal or employee data is expected for the role.**| Access must follow least-privilege principles and be tied to a clear business purpose. Requires documented justification, manager or data-owner approval, and regular access reviews to ensure ongoing necessity. |
+| **3 – System Influence** | Access at this tier allows modification of code, configurations, or environments that influence system behavior without direct access to sensitive production data. Misuse presents latent risk, as changes may introduce vulnerabilities, instability, or downstream production issues. Trust impact is indirect but material if issues propagate, with a blast radius typically limited to internal systems but capable of cascading. | Access requires environment separation, change accountability, and periodic review. Production-impacting actions should be constrained and monitored, with controls to prevent unintended propagation into sensitive environments. |
+| **4 – Automation and Non-human Execution** | Access at this tier is held by applications, services, or integrations that perform automated processing or data movement. While data exposure depends on permission scope, misuse can occur rapidly and at scale due to automation and lack of human judgment. Trust impact escalates quickly if automation affects users broadly or disrupts services, with a potentially large blast radius. **These roles only require visibility.**| Access must be narrowly scoped, explicitly owned, and regularly reviewed. Permissions should be minimized, credentials protected and rotated, and automated activity monitored to detect misuse or unintended behavior. |
+| **5 – General Access** | Access at this tier is limited to non-sensitive internal information with no ability to modify systems or controls. Misuse carries minimal confidentiality, operational, or reputational impact, and effects are typically isolated to individual users or internal tooling. | Access can follow lightweight approval and infrequent review, with basic authentication controls. Governance focuses on maintaining baseline hygiene rather than intensive oversight. |
 
 ### 1.3.2 Map roles to risk tiers
+
+| Role | Role description | Risk tier |
+|---|---|---|
+| CEO | Owns company strategy, growth, and external trust. Requires visibility into business performance but no operational system control. | 5 |
+| CTO | Owns technology strategy, platform reliability, and security posture. Accountable for engineering, data, and system integrity. | 1 |
+| Head of Engineering | Owns engineering delivery, technical standards, and execution. Accountable for system quality and change management. | 3 |
+| Head of Data / Data Science Lead | Owns analytics strategy, model development, and responsible use of data. | 2 |
+| Software Engineer | Builds and maintains application code and services, primarily in development and test environments. | 3 |
+| Platform / Infrastructure Engineer | Maintains cloud environments, deployment pipelines, and operational tooling. | 1 |
+| Data Scientist / ML Engineer | Develops models, analytics logic, and insight generation using derived or anonymized data. | 2 |
+| Data Engineer | Builds and maintains data pipelines, ETL processes, and data transformations. | 4 |
+| Head of Product | Owns product vision, roadmap, and user experience decisions with access to aggregated metrics. | 5 |
+| Product Manager | Defines requirements, experiments, and feature priorities using aggregated analytics. | 5 |
+| Customer Support Manager | Owns support workflows, quality, and escalation with limited access to user data. | 2 |
+| Customer Support Specialist | Assists users with issues using scoped, read-only access to user accounts. | 2 |
+| Head of Marketing / Growth | Owns acquisition strategy, campaigns, and brand positioning using aggregated data. | 5 |
+| Marketing Analyst / Growth Specialist | Works with campaign performance and engagement metrics. | 5 |
+| Head of Operations | Owns internal operations, vendors, and service delivery. | 5 |
+| People Operations Manager | Owns hiring, onboarding, and employee lifecycle processes with access to employee data. | 2 |
+| HR / People Ops Specialist | Manages employee records and onboarding coordination. | 2 |
+| Finance Manager | Owns billing, payroll, and financial reporting systems. | 2 |
+| Finance Analyst | Manages invoicing, expenses, and financial reporting. | 2 |
+| Data Labeling Contractor | Supports model training with limited, scoped access to datasets. | 2 |
+| Model Tuning Contractor | Supports analytics refinement under supervision and time-bound access. | 2 |
+| Support Overflow Contractor | Assists customer support during peak demand with restricted access. | 2 |
+| Cloud Operations Contractor | Provides specialized infrastructure or security support on fixed engagements. | 1 |
+| Integration Partner (API) | External organization integrating via API using non-human identities. | 4 |
+
 ### 1.3.3 Define governance expectations per risk tier
 
 ## 1.4 IAM and IGA Policy
