@@ -37,40 +37,40 @@ Different identity populations are exposed to sensitive data or workloads, makin
 
 | Tier | Risk impact summary | Governance decision it drives |
 |---|---|---|
-| **1 – Privileged Access** | Access at this tier enables modification of core infrastructure, identity systems, and security controls, fundamentally altering system behavior, availability, and integrity. Misuse may expose or compromise large volumes of highly sensitive data across multiple systems, creating organization-wide impact. The resulting trust and reputational damage would be severe, including failure of due care and due diligence expectations, and would likely require full incident response and recovery. **Normally requires privileged or control-plane access to perform the role.**| Access must be exceptional, time-bound, and tightly controlled. Standing access is avoided where possible. Requires senior approval, just-in-time elevation, strong authentication, continuous logging, and frequent access reviews. |
-| **2 – Sensitive Data Access** | Access at this tier involves personal data or derived analytical outputs where misuse directly affects confidentiality and privacy. While system modification capabilities are limited, the personal nature of the data creates high trust impact for affected users. The blast radius is typically scoped to defined user populations or datasets but carries meaningful legal, ethical, and reputational consequences. **Interaction with sensitive personal or employee data is expected for the role.**| Access must follow least-privilege principles and be tied to a clear business purpose. Requires documented justification, manager or data-owner approval, and regular access reviews to ensure ongoing necessity. |
+| **5 – Privileged Access** | Access at this tier enables modification of core infrastructure, identity systems, and security controls, fundamentally altering system behavior, availability, and integrity. Misuse may expose or compromise large volumes of highly sensitive data across multiple systems, creating organization-wide impact. The resulting trust and reputational damage would be severe, including failure of due care and due diligence expectations, and would likely require full incident response and recovery. **Normally requires privileged or control-plane access to perform the role.**| Access must be exceptional, time-bound, and tightly controlled. Standing access is avoided where possible. Requires senior approval, just-in-time elevation, strong authentication, continuous logging, and frequent access reviews. |
+| **4 – Sensitive Data Access** | Access at this tier involves personal data or derived analytical outputs where misuse directly affects confidentiality and privacy. While system modification capabilities are limited, the personal nature of the data creates high trust impact for affected users. The blast radius is typically scoped to defined user populations or datasets but carries meaningful legal, ethical, and reputational consequences. **Interaction with sensitive personal or employee data is expected for the role.**| Access must follow least-privilege principles and be tied to a clear business purpose. Requires documented justification, manager or data-owner approval, and regular access reviews to ensure ongoing necessity. |
 | **3 – System Influence** | Access at this tier allows modification of code, configurations, or environments that influence system behavior without direct access to sensitive production data. Misuse presents latent risk, as changes may introduce vulnerabilities, instability, or downstream production issues. Trust impact is indirect but material if issues propagate, with a blast radius typically limited to internal systems but capable of cascading. | Access requires environment separation, change accountability, and periodic review. Production-impacting actions should be constrained and monitored, with controls to prevent unintended propagation into sensitive environments. |
-| **4 – Automation and Non-human Execution** | Access at this tier is held by applications, services, or integrations that perform automated processing or data movement. While data exposure depends on permission scope, misuse can occur rapidly and at scale due to automation and lack of human judgment. Trust impact escalates quickly if automation affects users broadly or disrupts services, with a potentially large blast radius. **These roles only require visibility.**| Access must be narrowly scoped, explicitly owned, and regularly reviewed. Permissions should be minimized, credentials protected and rotated, and automated activity monitored to detect misuse or unintended behavior. |
-| **5 – General Access** | Access at this tier is limited to non-sensitive internal information with no ability to modify systems or controls. Misuse carries minimal confidentiality, operational, or reputational impact, and effects are typically isolated to individual users or internal tooling. | Access can follow lightweight approval and infrequent review, with basic authentication controls. Governance focuses on maintaining baseline hygiene rather than intensive oversight. |
+| **2 – Automation and Non-human Execution** | Access at this tier is held by applications, services, or integrations that perform automated processing or data movement. While data exposure depends on permission scope, misuse can occur rapidly and at scale due to automation and lack of human judgment. Trust impact escalates quickly if automation affects users broadly or disrupts services, with a potentially large blast radius. **These roles only require visibility.**| Access must be narrowly scoped, explicitly owned, and regularly reviewed. Permissions should be minimized, credentials protected and rotated, and automated activity monitored to detect misuse or unintended behavior. |
+| **1 – General Access** | Access at this tier is limited to non-sensitive internal information with no ability to modify systems or controls. Misuse carries minimal confidentiality, operational, or reputational impact, and effects are typically isolated to individual users or internal tooling. | Access can follow lightweight approval and infrequent review, with basic authentication controls. Governance focuses on maintaining baseline hygiene rather than intensive oversight. |
 
 ### 1.3.2 Map roles to risk tiers
 
 | Role | Role description | Risk tier |
 |---|---|---|
-| CEO | Owns company strategy, growth, and external trust. Requires visibility into business performance but no operational system control. | 5 |
-| CTO | Owns technology strategy, platform reliability, and security posture. Accountable for engineering, data, and system integrity. | 1 |
+| CEO | Owns company strategy, growth, and external trust. Requires visibility into business performance but no operational system control.  | 1 |
+| CTO | Owns technology strategy, platform reliability, and security posture. Accountable for engineering, data, and system integrity.       | 5 |
 | Head of Engineering | Owns engineering delivery, technical standards, and execution. Accountable for system quality and change management. | 3 |
-| Head of Data / Data Science Lead | Owns analytics strategy, model development, and responsible use of data. | 2 |
-| Software Engineer | Builds and maintains application code and services, primarily in development and test environments. | 3 |
-| Platform / Infrastructure Engineer | Maintains cloud environments, deployment pipelines, and operational tooling. | 1 |
-| Data Scientist / ML Engineer | Develops models, analytics logic, and insight generation using derived or anonymized data. | 2 |
-| Data Engineer | Builds and maintains data pipelines, ETL processes, and data transformations. | 4 |
-| Head of Product | Owns product vision, roadmap, and user experience decisions with access to aggregated metrics. | 5 |
-| Product Manager | Defines requirements, experiments, and feature priorities using aggregated analytics. | 5 |
-| Customer Support Manager | Owns support workflows, quality, and escalation with limited access to user data. | 2 |
-| Customer Support Specialist | Assists users with issues using scoped, read-only access to user accounts. | 2 |
-| Head of Marketing / Growth | Owns acquisition strategy, campaigns, and brand positioning using aggregated data. | 5 |
-| Marketing Analyst / Growth Specialist | Works with campaign performance and engagement metrics. | 5 |
-| Head of Operations | Owns internal operations, vendors, and service delivery. | 5 |
-| People Operations Manager | Owns hiring, onboarding, and employee lifecycle processes with access to employee data. | 2 |
-| HR / People Ops Specialist | Manages employee records and onboarding coordination. | 2 |
-| Finance Manager | Owns billing, payroll, and financial reporting systems. | 2 |
-| Finance Analyst | Manages invoicing, expenses, and financial reporting. | 2 |
-| Data Labeling Contractor | Supports model training with limited, scoped access to datasets. | 2 |
-| Model Tuning Contractor | Supports analytics refinement under supervision and time-bound access. | 2 |
-| Support Overflow Contractor | Assists customer support during peak demand with restricted access. | 2 |
-| Cloud Operations Contractor | Provides specialized infrastructure or security support on fixed engagements. | 1 |
-| Integration Partner (API) | External organization integrating via API using non-human identities. | 4 |
+| Head of Data / Data Science Lead | Owns analytics strategy, model development, and responsible use of data.                                | 4 |
+| Software Engineer | Builds and maintains application code and services, primarily in development and test environments.                    | 3 |
+| Platform / Infrastructure Engineer | Maintains cloud environments, deployment pipelines, and operational tooling.                          | 5 |
+| Data Scientist / ML Engineer | Develops models, analytics logic, and insight generation using derived or anonymized data.                  | 4 |
+| Data Engineer | Builds and maintains data pipelines, ETL processes, and data transformations.                                              | 2 |
+| Head of Product | Owns product vision, roadmap, and user experience decisions with access to aggregated metrics.                           | 1 |
+| Product Manager | Defines requirements, experiments, and feature priorities using aggregated analytics.                                    | 1 |
+| Customer Support Manager | Owns support workflows, quality, and escalation with limited access to user data.                               | 4 |
+| Customer Support Specialist | Assists users with issues using scoped, read-only access to user accounts.                                   | 4 |
+| Head of Marketing / Growth | Owns acquisition strategy, campaigns, and brand positioning using aggregated data.                            | 1 |
+| Marketing Analyst / Growth Specialist | Works with campaign performance and engagement metrics.                                            | 1 |
+| Head of Operations | Owns internal operations, vendors, and service delivery.                                                              | 1 |
+| People Operations Manager | Owns hiring, onboarding, and employee lifecycle processes with access to employee data.                        | 4 |
+| HR / People Ops Specialist | Manages employee records and onboarding coordination.                                                         | 4 |
+| Finance Manager | Owns billing, payroll, and financial reporting systems.                                                                  | 4 |
+| Finance Analyst | Manages invoicing, expenses, and financial reporting.                                                                    | 4 |
+| Data Labeling Contractor | Supports model training with limited, scoped access to datasets.                                                | 4 |
+| Model Tuning Contractor | Supports analytics refinement under supervision and time-bound access.                                           | 4 |
+| Support Overflow Contractor | Assists customer support during peak demand with restricted access.                                          | 4 |
+| Cloud Operations Contractor | Provides specialized infrastructure or security support on fixed engagements.                                | 5 |
+| Integration Partner (API) | External organization integrating via API using non-human identities.                                          | 2 |
 
 ### 1.3.3 Define governance expectations per risk tier
 
